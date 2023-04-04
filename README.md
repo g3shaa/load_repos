@@ -1,11 +1,11 @@
-<p>Проектът "load_repos" е написан на езика за програмиране JavaScript. Основната цел на проекта е да изтегли и покаже списък с всички репозиторита, свързани с вашия GitHub профил.</p>
-<p>Кодът на проекта използва GitHub API, за да получи информацията за репозиторитата на даден потребител. За тази цел, проектът използва Fetch API, който е вграден в браузъра и позволява изпращането на HTTP заявки към различни сървъри.</p>
-<p>Особеностите на проекта включват:</p>
+<p>The "load_repos" project is written in the JavaScript programming language. The main goal of the project is to fetch and display a list of all repositories associated with your GitHub profile.</p>
+<p>The project's code uses the GitHub API to obtain information about a user's repositories. For this purpose, the project uses the Fetch API, which is built into the browser and allows sending HTTP requests to different servers.</p>
+<p>The features of the project include:</p>
 <ul>
-  <li>Използването на Fetch API за изпращане на заявки към GitHub API и получаване на JSON отговори;</li>
-  <li>Използването на Promise обекти, за да се управляват асинхронните операции;</li>
-  <li>Използването на DOM манипулации, за да се създаде и покаже списъкът с репозиториите;</li>
-  <li>Използването на HTML и CSS за стилизиране на изгледа на проекта.</li>
+  <li>Using the Fetch API to send requests to the GitHub API and receive JSON responses;</li>
+  <li>Using Promise objects to manage asynchronous operations;</li>
+  <li>Using DOM manipulations to create and display the list of repositories;</li>
+  <li>Using HTML and CSS to style the project's appearance.</li>
 </ul>
 
 ![image](https://user-images.githubusercontent.com/64840882/229859425-fc8da0e1-e1fe-43ae-8e22-cc9ee484b322.png)
