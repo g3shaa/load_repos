@@ -7,3 +7,9 @@
   <li>Използването на DOM манипулации, за да се създаде и покаже списъкът с репозиториите;</li>
   <li>Използването на HTML и CSS за стилизиране на изгледа на проекта.</li>
 </ul>
+
+![image](https://user-images.githubusercontent.com/64840882/229859425-fc8da0e1-e1fe-43ae-8e22-cc9ee484b322.png)
+
+![image](https://user-images.githubusercontent.com/64840882/229859524-1f616528-bd74-47e3-b7e8-3758d2e6556f.png)
+
+![image](https://user-images.githubusercontent.com/64840882/229859706-da27dc5b-3f8a-4c5a-9a5e-6a4d296e510e.png)
