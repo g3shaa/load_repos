@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="../scripts/script.js"></script>
+    <link rel="favicon" href="../assets/fav.png" type="image/png">
     <title>Github Repo</title>
 </head>
 
@@ -17,14 +18,15 @@
     <br>
     <hr>
     <div id="container">
-        <input type="text" id="username" placeholder="g3shaa" />
+        <input type="text" id="username" placeholder="g3shaa" required/>
         <button onclick="FuncRepos()" class = "FormBtn">Show Profile</button>
         <label for="format">Select format:</label>
         <select id="format">
-          <option value="json">JSON</option>
-          <option value="csv">CSV</option>
+          <option value="json">JSON File</option>
+          <option value="csv">CSV File</option>
+          <option value="txt">TXT File</option>
         </select>
-        <button onclick="saveToJson()" class = "FormBtn">Save Data</button>
+        <button onclick="saveFile()" class = "FormBtn">Save Data</button>
     </div>
     <br>
     <hr>
