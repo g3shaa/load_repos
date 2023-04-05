@@ -1,7 +1,7 @@
 function FuncRepos() {
     $('#repos').empty();
     let url = "https://api.github.com/users/" + $("#username").val() + "/repos";
-    let token = "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";
+    let token = "YOUR-GITHUB-ACCESS-TOKEN";
 
     return $.ajax({
         url: url,
@@ -85,8 +85,6 @@ function saveFile() {
     }
 }
 
-
-
 let displayedUsers = {};
 
 function displayUserInfo(user) {
@@ -142,10 +140,6 @@ function displayUserInfo(user) {
         displayedUsers[user.login] = true;
     });
 }
-
-
-
-
 
 function getUserInfo() {
     let username = $("#username").val();
