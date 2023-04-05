@@ -46,6 +46,8 @@ function saveFile() {
     const username = document.getElementById("username").value;
     const repos = document.getElementById("repos").innerText.split("\n").filter(repo => repo.trim() !== "");
     const format = document.getElementById("format").value;
+    const now = new Date();
+    const timestamp = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
 
     let data;
     let filename;
@@ -56,15 +58,15 @@ function saveFile() {
             "username": username,
             "repos": repos
         });
-        filename = `${username}.json`;
+        filename = `${username}_${timestamp}.json`;
         mimetype = "application/json";
     } else if (format === "csv") {
         data = "Repository\n" + repos.join("\n");
-        filename = `${username}.csv`;
+        filename = `${username}_${timestamp}.csv`;
         mimetype = "text/csv";
     } else if (format === "txt") {
         data = "Repository\n" + repos.join("\n");
-        filename = `${username}.txt`;
+        filename = `${username}_${timestamp}.txt`;
         mimetype = "text/plain";
     }
 
@@ -82,6 +84,7 @@ function saveFile() {
         alert(`${filename} saved successfully!`);
     }
 }
+
 
 
 let displayedUsers = {};
@@ -122,19 +125,25 @@ function displayUserInfo(user) {
         let favoriteLanguage = $('<p>').text('Favorite language: ' + (maxLanguage ? maxLanguage : 'Unknown'));
         userDiv.append(favoriteLanguage);
 
-        let createdAt = $('<p>').text('Created at: ' + user.created_at);
+        let createdAt = new Date(user.created_at);
+        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let formattedCreatedAt = `Created at: ${createdAt.getDate()} ${months[createdAt.getMonth()]}, ${createdAt.getFullYear()} | Time: ${createdAt.getHours()}:${(createdAt.getMinutes() < 10 ? '0' : '') + createdAt.getMinutes()}:${(createdAt.getSeconds() < 10 ? '0' : '') + createdAt.getSeconds()}`;
+        let createdAtParagraph = $('<p>').text(formattedCreatedAt);
+
         let button = $('<button>')
             .text('View Profile')
             .on('click', function () {
                 window.open(user.html_url);
             });
 
-        userDiv.append(avatar, name, bio, followers, following, publicRepos, email, location, favoriteLanguage, createdAt, button);
+        userDiv.append(avatar, name, bio, followers, following, publicRepos, email, location, favoriteLanguage, createdAtParagraph, button);
         $('#repos').append($('<li>').append(login, userDiv));
 
         displayedUsers[user.login] = true;
     });
 }
+
+
 
 
 
